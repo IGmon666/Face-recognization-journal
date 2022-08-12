@@ -1,0 +1,23 @@
+Today's corporate world is growing with the speed of light, everything in our corporate world is getting automated to boost the industry but the way of taking
+attendance or tracking a record of people's presence is still ancient way. Educational institutes still use the old method of calling out the name of a roll of
+students. We can say that companies, educational institutes and governmental offices around the world still use some of the old methods like managing attendance
+sheets. However nowadays in the fast-paced working environment, these old methods are too inconvenient and inefficient.  The method of taking attendance records
+has evolved through the years but still, they can't completely fix the problems like:
+
+1) A Biometric system using fingerprints is the most common way of taking attendance that is used by companies to ensure that employees are truly present 
+by scanning their fingerprints or handprint. But we all know after 2020 it is not a good idea to use a public fingerprint sensor.
+
+2) Scanning the QR code on the ID card, also takes time and is not that convenient.
+
+
+In the corporate world, Employee attendance affects the overtime pay, your customer's experience and your overall finances. In the Educational field,
+it affects the whole progress of the students.
+Challenges to attendance include unexpected absences, late arrivals, early departures and sick employees coming to work.
+We should craft attendance policies and use time and attendance software to measure employees’ hours.
+The modern way we want to implement is to fix a sensor which keeps a track of who is present at that particular point. How is this different from CCTV,
+CCTV camera just records the activity and stores it in the server, our sensor records the activity, analysis the data that it receives, recognizes the face,
+calculates the activity and stores the whole summary of what exactly was happening at that point. In simple words we can say a CCTV camera is like an eye
+and our sensor is like an eye with a brain.
+
+
+
