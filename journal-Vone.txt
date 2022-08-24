@@ -15,6 +15,12 @@ The modern way we want to implement is to fix a sensor which keeps a track of wh
 In different types of offices, security rooms include multiple monitors with multiple camera recordings on them. There we find out that only one or maybe two security guards monetise all that information. Let's be honest it's impossible to notice if something happens then. They might pay attention after the disaster happens.
 Even after something happens it's really hard to recognize at what point in time it happened. Even after so many precautions, it's a big security threat for us to rely on CCTV cameras which will just show us how the event was caused. We all know precaution is better than prevention.
 
+PART : A  { streaming the video in server }
+	At first we need some 
+
+
+
+
 The device we are planning to build is will analyse all the data from the sensors and provide that data on a particular screen making it easier to handle and monetise. It will also send a warning if it senses some unusual activity is taking place. 
 
 CCTV cameras in the bank take the footage at night but it won't be able to stop it from happening. Our future updates will send the signal at that point of time to the nearest police station, and if we get data from government files then at the same time it will be able to recognize the person through addhar links. As we all know addhar has the whole biometric of a person.
@@ -22,6 +28,53 @@ CCTV cameras in the bank take the footage at night but it won't be able to stop 
 In criminal cases, if police suspect someone then it is impossible to keep track of that person for 24 hrs using a CCTV camera because then we have to assign another person to watch him through a CCTV camera. Our device with the help of AI will be capable to keep track of the person.
 We have already seen fire sensors which spray water on that detected area. Just like  that our device will also detect activities and will give us signals on our mobiles
   
+
+
+Parts required
+To build Arduino projects you need some electronics components beside the bare Arduino board.
+•	The components are:
+•	1 Esp32 camera module
+•	1 bread board
+•	1 5V battery
+•	Jumper wires
+•	Wires
+•	Windows computer
+
+Introducing the Arduino
+
+So take a deep dive into the most important component of the project, that is the arduino board.
+The Arduino is a small computer that you can program to read information from the world around you and send commands to the outside world. All of this is possible because you can connect several devices like here we will connect the esp32 camera module.
+You can do amazing projects with it, there is no limit for what you can do, and using your imagination everything is possible!
+
+Basically, it is a small development board with a brain (also known as a microcontroller) that you can connect to electrical circuits. This makes it easy to read inputs – read data from the outside – and control outputs - send a command to the outside. The brain of this board (Arduino Uno) is an ATmega328p chip where you can store your programs that will tell your Arduino what to do.
+We have to insert our code using Arduino IDE
+You can download it from here:
+https://www.arduino.cc/en/software
+While uploading the code the arduino must be connected to the pc using a wire.
+
+Parts of the Arduino board:
+
+• Microcontroller: the ATmega328p is the Arduino brain. Everything on the Arduino board is meant to support this microcontroller. This is where you store your programs to tell the Arduino what to do. ATmega328p has a modified hardvard architecture 8-bit RISC processor core. ATmega328P is one of the high performances AVR technology microcontroller with a large number of pins and features
+• Digital pins: Arduino has 14 digital pins, labeled from 0 to 13 that can act as inputs or outputs. o When set as inputs, these pins can read voltage. They can only read two states: HIGH or LOW. o When set as outputs, these pins can apply voltage. They can only apply 5V (HIGH) or 0V (LOW).
+• PWM pins: These are digital pins marked with a ~ (pins 11, 10, 9, 6, 5 and 3). PWM stands for “pulse width modulation” and allows the digital pins output “fake” varying amounts of voltage. You’ll learn more about PWM later. 
+• TX and RX pins: digital pins 0 and 1. The T stands for “transmit” and the R for “receive”. The Arduino uses these pins to communicate with other electronics via Serial. Arduino also uses these pins to communicate with your computer when uploading new code. Avoid using these pins for other tasks other than serial communication, unless you’re running out of pins. 
+• LED attached to digital pin 13: This is useful for an easy debugging of the Arduino sketches. It will be removed after testing 
+• TX and RX LEDs: these leds blink when there are information being sent between the computer and the Arduino.
+• Analog pins: the analog pins are labeled from A0 to A5 and are often used to read analog sensors. They can read different amounts of voltage between 0 and 5V. Additionally, they can also be used as digital output/input pins like the digital pins. 
+• Power pins: the Arduino provides 3.3V or 5V through these pins. This is really useful since most components require 3.3V or 5V to operate. The pins labelled as “GND” are the ground pins. 
+• Reset button: when you press that button, the program that is currently being run in your Arduino restarts. You also have a Reset pin next to the power pins that acts as reset button. When you apply a small voltage to that pin, it will reset the Arduino.
+ • Power ON LED: will be on since power is applied to the Arduino. 
+• USB jack: you need a male USB A to male USB B cable (shown in figure below) to upload programs from your computer to your Arduino board. This cable also powers your Arduino.
+
+• Power jack: you can power the Arduino through the power jack. The recommended input voltage is 7V to 12V. There are several ways to power up your Arduino: rechargeable batteries, disposable batteries, wall-warts and solar panel. While uploading the code it should be connected with the computer then when we will receive the http link then we will disconnect the esp32 camera with arduino then will connect it with 5V battery
+
+Downloading the Arduino IDE
+ The Arduino IDE (Integrated Development Environment) is where you develop your programs that will tell the Arduino what to do. You can load new programs onto the main chip, the ATmega328p, via USB using the Arduino IDE. To download the Arduino IDE, please click on the following link: https://www.arduino.cc/en/Main/Software.
+ Select which Operating System you’re using and download it. Then, simply follow the installation wizard to install the Arduino IDE. When you first open the Arduino IDE, you should see something similar to the figure below:
+Connecting your Arduino
+ Connect your Arduino UNO to your computer via USB. After connecting your Arduino with a USB cable, you need to make sure that the Arduino IDE has selected the right board. In our case, we’re using Arduino Uno, so we should go to Tools  Board:  Arduino/Genuino Uno.
+
+
 
 
 
