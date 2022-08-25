@@ -69,10 +69,27 @@ Parts of the Arduino board:
 • Power jack: you can power the Arduino through the power jack. The recommended input voltage is 7V to 12V. There are several ways to power up your Arduino: rechargeable batteries, disposable batteries, wall-warts and solar panel. While uploading the code it should be connected with the computer then when we will receive the http link then we will disconnect the esp32 camera with arduino then will connect it with 5V battery
 
 Downloading the Arduino IDE
- The Arduino IDE (Integrated Development Environment) is where you develop your programs that will tell the Arduino what to do. You can load new programs onto the main chip, the ATmega328p, via USB using the Arduino IDE. To download the Arduino IDE, please click on the following link: https://www.arduino.cc/en/Main/Software.
+ The Arduino IDE (Integrated Development Environment) is where you develop your programs that will tell the Arduino what to do. You can load new programs onto the main chip, the ATmega328p, via USB using the Arduino IDE. To download the Arduino IDE, please click on the following link: https://www.arduino.cc/en/software.
  Select which Operating System you’re using and download it. Then, simply follow the installation wizard to install the Arduino IDE. When you first open the Arduino IDE, you should see something similar to the figure below:
 Connecting your Arduino
- Connect your Arduino UNO to your computer via USB. After connecting your Arduino with a USB cable, you need to make sure that the Arduino IDE has selected the right board. In our case, we’re using Arduino Uno, so we should go to Tools  Board:  Arduino/Genuino Uno.
+ Connect your Arduino UNO to your computer via USB. After connecting your Arduino with a USB cable, you need to make sure that the Arduino IDE has selected the right board. In our case, we’re using Arduino Uno, so we should go to Tools > Board: > Arduino/Genuino Uno.
+Then, you should select the serial port where your Arduino is connected to. Go to Tools > Port and select the right port
+
+
+
+
+Uploading an Arduino Sketch
+ To show you how to upload code to your Arduino board, we’ll show you a simple example. This is one of the most basic examples – it consists in blinking the on-board LED or digital pin 13 every second.
+Open your Arduino IDE.
+Go to File> Preference
+Copy-paste the following URLs at Aditional boards Manager URLs : https://dl.espressif.com/dl/package_esp32_index.json, http://arduino.esp8266.com/stable/package_esp8266com_index.json
+
+Then go to Tools> Board >Boards Manager> Search esp 32 module and install it 
+
+Go to File> Example> 0.1 Basics >Blink
+By default, the Arduino IDE comes pre-configured for the Arduino UNO. Click the Upload button and wait a few seconds.
+After a few seconds, you should see a Done uploading message.
+This code simply blinks the on-board LED on your Arduino UNO (highlighted with red color). You should see the little LED turn on for one second, and turn off for another second repeatedly.
 
 
 
