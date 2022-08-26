@@ -16,10 +16,7 @@ In different types of offices, security rooms include multiple monitors with mul
 Even after something happens it's really hard to recognize at what point in time it happened. Even after so many precautions, it's a big security threat for us to rely on CCTV cameras which will just show us how the event was caused. We all know precaution is better than prevention.
 
 
-
-
-
-The device we are planning to build will analyse all the data from the sensors and provide that data on a particular screen making it easier to handle and monetise. It will also send a warning if it senses some unusual activity is taking place. 
+The device we are planning to build is will analyse all the data from the sensors and provide that data on a particular screen making it easier to handle and monetise. It will also send a warning if it senses some unusual activity is taking place. 
 
 CCTV cameras in the bank take the footage at night but it won't be able to stop it from happening. Our future updates will send the signal at that point of time to the nearest police station, and if we get data from government files then at the same time it will be able to recognize the person through addhar links. As we all know addhar has the whole biometric of a person.
 
@@ -83,12 +80,68 @@ Go to File> Preference
 Copy-paste the following URLs at Aditional boards Manager URLs : https://dl.espressif.com/dl/package_esp32_index.json, http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
 Then go to Tools> Board >Boards Manager> Search esp 32 module and install it 
+Then you have to upload a example sketch for that 
+Go to File> Example> ESP 32 >camera> CameraWebServer
+then a new page will open where you will find that all the required  codes are written
+***changes in code***
+step 1)
+ in that code you will find a variable named “const char* ssid=”*******” // here you have to type your wifi name and another variable will be available below that named “const char*  password=”*******”// here you have to type your wifi password
 
-Go to File> Example> 0.1 Basics >Blink
+step2)
+ you have to choose your camera module:
+here in this project we used “AI thinker” // there will be a section named “select camera module”
+there you have to uncomment the camera module you are using ( remove the “//” written before #define ), so in our case our module looks like “ #define CAMERA_MODEL_AI_THINKER ”
+ except the module you are using each and every camera module should be commented( put “//” before the module name ) 
+***setting changes***
+
+
+
+Step3) 
+go to tools> make few settings **set all the following settings **
+*Board “ESP32 Wrover Module”
+*Flash Mode: “QIO”
+*Partition Scheme: “ Huge APP( 3MB No OTA/1MB SPIFFS ) ”
+*Flash Frequency: “40MHz”
+*Upload Speed : “115200”
+*Core Debug Level : “None”
+*Port : “ COM3(Arduino Uno)  ”
+*Programmer: “AVR ISP”
+***uploading**
+Step1)
+Click the upload button under the edit button on ide
+Then on the esp cam model click on the reset button
+// you will see uploading started in the footer portion of the screen you will see the percentage that how much code is unloaded (0% to 100%)
+
+It will take 1 min or more
+
+Step2)
+When uploading is 100% completed the disconnect the female to female wire which connects 
+GPIO-0 to GND on the esp32 module
+
+Step3)
+After disconnecting the click on serial monitor which is in the top right most corner(looks like a magnifying glass)
+
+Step4)
+Then in the bottom left most part you have select the braud rate 115200
+
+
+Step5)
+then if you press the reset button of the esp32 cam model
+ then you should get the ip address on the screen 
+looks like  “camera is ready : http//******* to connect “
+copy and paste the ip address on your browser then a page should open with red buttons and black screen then in the bottom part you have to click on the “start stream” button then you should be able to seen the screen working 
+On the serial monitor you see the data is been shown in the form of hexadecimal that is collected from the screen 
+ ** you should get the desired result if you get any error then disconnect the esp32 module with arduino board and again do it**
+
+
+
 By default, the Arduino IDE comes pre-configured for the Arduino UNO. Click the Upload button and wait a few seconds.
 After a few seconds, you should see a Done uploading message.
 This code simply blinks the on-board LED on your Arduino UNO (highlighted with red color). You should see the little LED turn on for one second, and turn off for another second repeatedly.
-
+Control an Output and Read an Input
+ An Arduino board contains digital pins, analog pins and PWM pins. Difference between digital, analog and PWM In digital pins, you have just two possible states, which are on or off. These can also be referred as High or Low, 1 or 0 and 5V or 0V. For example, if an LED is on, then, its state is High or 1 or 5V. If it is off, you’ll have Low, or 0 or 0V. In analog pins, you have unlimited possible states between 0 and 1023. This allows you to read sensor values. For example, with a light sensor, if it is very dark, you’ll read 1023, if it is very bright you’ll read 0 If there is a brightness between dark and very bright you’ll read a value between 0 and 1023.
+WM pins are digital pins, so they output either 0 or 5V. However these pins can output “fake” intermediate voltage values between 0 and 5V, because they can perform “Pulse Width Modulation” (PWM). PWM allows to “simulate” varying levels of power by oscillating the output voltage of the Arduino.
+Controlling an output To control a digital output you use the digitalWrite() function and between brackets you write, the pin you want to control, and then HIGH or LOW. To control a PWM pin you use the analogWrite() function and between brackets you write the pin you want to control and a number between 0 and 255. Reading an input To read an analog input you use the function analogRead() and for a digital input you use digitalRead(). The best way for you to learn Arduino is practising. So, choose a project and start building something.
 
 
 
