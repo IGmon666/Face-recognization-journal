@@ -15,13 +15,11 @@ The modern way we want to implement is to fix a sensor which keeps a track of wh
 In different types of offices, security rooms include multiple monitors with multiple camera recordings on them. There we find out that only one or maybe two security guards monetise all that information. Let's be honest it's impossible to notice if something happens then. They might pay attention after the disaster happens.
 Even after something happens it's really hard to recognize at what point in time it happened. Even after so many precautions, it's a big security threat for us to rely on CCTV cameras which will just show us how the event was caused. We all know precaution is better than prevention.
 
-PART : A  { streaming the video in server }
-	At first we need some 
 
 
 
 
-The device we are planning to build is will analyse all the data from the sensors and provide that data on a particular screen making it easier to handle and monetise. It will also send a warning if it senses some unusual activity is taking place. 
+The device we are planning to build will analyse all the data from the sensors and provide that data on a particular screen making it easier to handle and monetise. It will also send a warning if it senses some unusual activity is taking place. 
 
 CCTV cameras in the bank take the footage at night but it won't be able to stop it from happening. Our future updates will send the signal at that point of time to the nearest police station, and if we get data from government files then at the same time it will be able to recognize the person through addhar links. As we all know addhar has the whole biometric of a person.
 
